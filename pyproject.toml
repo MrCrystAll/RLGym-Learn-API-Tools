@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rlgym-learn-api-tools"
-version = "0.1.0a1"
+version = "0.1.0"
 description = "Objects used to communication with RLGym Learn's API"
 readme = "README.md"
 authors = [
@@ -23,7 +23,7 @@ classifiers = [
 where = ["src"]
 
 [tool.bumpversion]
-current_version = "0.1.0a1"
+current_version = "0.1.0"
 parse = """(?x)
     (?P<major>0|[1-9]\\d*)\\.
     (?P<minor>0|[1-9]\\d*)\\.
@@ -55,4 +55,4 @@ post_commit_hooks = []
 allow_shell_hooks = true
 
 [tool.bumpversion.parts.pre_l]
-values = ["a", "b", "rc"]
+values = ["dev", "rc"]

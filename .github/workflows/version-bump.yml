@@ -10,8 +10,14 @@ on:
             - major
             - minor
             - patch
+            - pre_l
+            - pre_n
           required: true
           type: choice
+        tag:
+          description: Whether to tag the version
+          type: boolean
+          default: false
 
 permissions: 
   contents: write
