@@ -35,6 +35,8 @@ jobs:
 
             - name: Bump minor version
               run: bump-my-version bump ${{inputs.bump-type}}
+              env:
+                GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
             - name: Push changes
               run: |
