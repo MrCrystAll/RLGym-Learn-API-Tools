@@ -9,7 +9,7 @@ from rlgym_learn_algos.logging.metrics_logger import (
     MetricsLogger,
 )
 
-from rlgym_learn_gui.communication import GUICommunicator
+from rlgym_learn_api_tools.communication import GUICommunicator
 
 InnerMetricsLoggerConfig = TypeVar("InnerMetricsLoggerConfig")
 

@@ -21,7 +21,7 @@ from rlgym_learn.api.typing import (
 )
 from rlgym_learn.rlgym_learn import EnvActionResponse, Timestep
 
-from rlgym_learn_gui.communication import GUICommunicator
+from rlgym_learn_api_tools.communication import GUICommunicator
 
 
 class GUIAgentControllerConfig(BaseModel, Generic[AgentControllerConfig]):

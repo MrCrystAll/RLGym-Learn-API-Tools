@@ -1,0 +1,46 @@
+name: "Bump version Development"
+
+on:
+    workflow_dispatch:
+      inputs:
+        bump-type:
+          description: "Type of version bump"
+          default: pre_n
+          options:
+            - major
+            - minor
+            - patch
+            - pre_l
+            - pre_n
+          required: true
+          type: choice
+
+jobs:
+    bump-version:
+        runs-on: ubuntu-24.04
+        steps:
+            - name: Configure git
+              run: |
+                git config user.name "github-actions[bot]"
+                git config user.email "github-actions[bot]@users.noreply.github.com"
+        
+            - name: Checkout
+              uses: actions/checkout@v6
+            - name: Setup python
+              uses: actions/setup-python@v6
+              with:
+                python-version: 3.13
+              run: pip install bump-my-version
+
+            - name: Bump minor version
+              run: bump-my-version bump ${{inputs.bump-type}}
+
+            - name: Push changes
+              run: |
+                git push
+                git push --tag
+                
+
+              
+
+            
