@@ -5,7 +5,7 @@ on:
       inputs:
         bump-type:
           description: "Type of version bump"
-          default: pre_n
+          default: pre_l
           options:
             - major
             - minor
