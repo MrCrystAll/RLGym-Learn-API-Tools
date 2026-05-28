@@ -29,7 +29,7 @@ jobs:
                 BUMPVERSION_TAG: "true"
               with:
                 args: ${{ inputs.bump-type }}
-                github-token: ${{ secrets.GITHUB_TOKEN }}
+                github-token: ${{ secrets.VERSION_PAT }}
             - name: Check
               if: steps.bump.outputs.bumped == 'true'
               run: |
