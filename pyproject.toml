@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rlgym-learn-gui"
+version = "0.1.0"
+description = "Objects used to communication with RLGym Learn's GUI"
+readme = "README.md"
+authors = [
+    { name = "Mathieu Suchet", email = "msuchet63@gmail.com" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["rlgym-learn-algos", "requests"]
+# Optional: define classifiers for PyPI
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
