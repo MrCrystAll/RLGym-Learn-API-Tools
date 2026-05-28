@@ -15,7 +15,7 @@ on:
           required: true
           type: choice
         tag:
-          description: Whether to tag the version
+          description: Tag?
           type: boolean
           default: false
 
@@ -32,7 +32,7 @@ jobs:
               id: bump
               uses: callowayproject/bump-my-version@master
               env:
-                BUMPVERSION_TAG: "true"
+                BUMPVERSION_TAG: ${{inputs.tag}}
               with:
                 args: ${{ inputs.bump-type }}
                 github-token: ${{ secrets.VERSION_PAT }}
